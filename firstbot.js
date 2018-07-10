@@ -3,11 +3,11 @@ var client = new irc.Client('irc.undernet.org', 'BruckerNet', {
     channels: ['#bruckernet']
 });
 
-//function ircAuth(nick, key) {
-//        this.nick = nick,
-//        this.key = key,
-//        this.authorised = false
-//};
+function ircAuth(nick, key) {
+        this.nick = nick,
+        this.key = key,
+        this.authorised = false
+};
     
 
 client.on('error', function(message) {
@@ -24,11 +24,12 @@ client.on('message', function (from, to, message) {
         client.say(to, "Hi " + from);
         console.log("'Replised: HI'" + from +"' --> " + from)
     }
-    if ("Eroade" == from){
+    if ("Eroade" == from && msg == "testkeywooo"){
         console.log("Owned");
         var test = new ircAuth(from, "testkeywooo");
         test.authorised = true;
         console.log(test.authorised);
-         
+        client.say(from, "Authorised") 
+        console.log(from, "Authorised") 
     }
 });
