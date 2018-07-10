@@ -1,13 +1,13 @@
 var irc = require('irc')
-var client = new irc.Client('irc.undernet.net', 'BruckerNet', {
+var client = new irc.Client('irc.undernet.org', 'BruckerNet', {
     channels: ['#bruckernet']
 });
 
-function ircAuth(nick, key) {
-        this.nick = nick,
-        this.key = key,
-        this.authorised = false
-};
+//function ircAuth(nick, key) {
+//        this.nick = nick,
+//        this.key = key,
+//        this.authorised = false
+//};
     
 
 client.on('error', function(message) {
