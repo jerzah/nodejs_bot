@@ -1,0 +1,20 @@
+{
+    "index": [
+        {
+            "hello" : "please",
+            "testtwp" : "oh yes"
+        }],
+     "index2":[
+        {
+            "hello" : "please",
+            "testtwp" : "oh yes"
+        }]
+,
+"#bruckernet": [{"prefix":"BruckerNet!~nodebot@37.220.13.53","nick":"BruckerNet","user":"~nodebot","host":"37.220.13.53","command":"JOIN","rawCommand":"JOIN","commandType":"normal","args":["#bruckernet"]}] 
+,
+"#bruckernet": [{"prefix":"BruckerNet!~nodebot@37.220.13.53","nick":"BruckerNet","user":"~nodebot","host":"37.220.13.53","command":"JOIN","rawCommand":"JOIN","commandType":"normal","args":["#bruckernet"]}]
+,
+"#bruckernet": [{"prefix":"BruckerNet!~nodebot@37.220.13.53","nick":"BruckerNet","user":"~nodebot","host":"37.220.13.53","command":"JOIN","rawCommand":"JOIN","commandType":"normal","args":["#bruckernet"]}] 
+
+,"#bruckernet": [{"prefix":"BruckerNet!~nodebot@37.220.13.53","nick":"BruckerNet","user":"~nodebot","host":"37.220.13.53","command":"JOIN","rawCommand":"JOIN","commandType":"normal","args":["#bruckernet"]}] 
+}

@@ -1,7 +1,7 @@
 var irc = require('irc')
 var client = new irc.Client('irc.undernet.org', 'BruckerNet', {
     channels: ['#bruckernet'],
-   /userName: '~aLameBotbla',
+    //userName: '~aLameBotbla',
     realName: 'myTestBot',
     floodProtection: true,
     floodProtectionDelay: 1000,
@@ -24,9 +24,16 @@ client.on('connect', function() {
 
 client.on('join', function(channel, nick, message) {
     var date =new Date();
+    var fs = require('fs');
     console.log(date);
     console.log(nick + " joined " + channel);
     console.log(message);
+    var jsonfile = JSON.stringify(message)
+    jsonfile = channel + ": [" + message + "], "
+    fs.appendFile('testMessage.json', ',"' + channel + '": [' + JSON.stringify(message)+ '] ' , function (err) {
+        if (err) throw err;
+        console.log('message saved');
+    });
 });
 
 client.on('message', function (from, to, message) {
@@ -45,5 +52,7 @@ client.on('message', function (from, to, message) {
         client.say(from, "Authorised"); 
         console.log(from, "Authorised"); 
     } 
-    console.log(from + " say's " + "'" + message + "'" + " to: " +  to);
+    else {
+        console.log(from + " say's " + "'" + message + "'" + " to: " +  to);
+    }
 });
